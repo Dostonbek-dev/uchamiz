@@ -1,0 +1,42 @@
+.box {
+  color: #e0ac1c;
+}
+.container .row h3{
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-family:'Cookie', cursive;
+  color: #e0ac1c;
+}
+.container{
+  font-family:'Cookie', cursive;
+  color: #e0ac1c;
+}
+.container select{
+  color: #e0ac1c;
+}
+.container select option{
+  width: 100px!important;
+}
+
+label{
+  font-size: 18px;
+}
+.box select option {
+  padding: 30px;
+}
+
+
+.card-hover{
+  margin: 10px;
+  width: 25%;
+  display: inline-block;
+}
+.card-hover:hover{
+  -webkit-box-shadow: 1px 1px 22px 6px rgba(0,0,0,0.21);
+  box-shadow: 1px 1px 22px 6px rgba(0,0,0,0.21);
+}
+.card-image{
+  width: 286px;
+  padding: 10px;
+}
+

@@ -1,0 +1,228 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+  <div class="row mt-5">
+    <div class="col-md-6 mt-5 offset-3">
+      <div class="card_">
+        <div class="card-header">
+          <h3 class="text-center text-warning" >Jismoniy Shaxs </h3>
+        </div>
+        <div class="card-body">
+          <div class="form-control">
+            <label > Ism famila</label>
+            <input type="text" class="form-control" [(ngModel)]="fio" name="fio">
+            <label > Pasport seria raqam</label>
+            <input type="text" class="form-control" [(ngModel)]="passportSeria" name="passpowrSeria">
+            <label > Yashash manzil</label>
+            <input type="text" class="form-control" [(ngModel)]="yashashManzil" name="yashashManzil">
+            <label >Pasport kim tomonidan berilgan</label>
+            <input type="text" class="form-control" [(ngModel)]="passpoortBerilgan" name="passportBerilgan">
+            <label >Tel Raqam</label>
+            <input type="text" class="form-control" [(ngModel)]="telRaqam" name="tel">
+          </div>
+        </div>
+        <div class="shartlar ">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" (change)="showChack($event)" value="doston" id="flexCheckDefault" [disabled]="checkedDisableted">
+            <label class="form-check-label" for="flexCheckDefault">
+              Shartlar bilan tanishib chiqing
+            </label>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" id="btnDisable" (click)="add()"  disabled>Saqlash</button>
+          <button class="btn btn-primary  ml-5" routerLink="/fizyur">Orqaga qaytish </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-md-5 offset-3 hide" [ngStyle]="{'display':openMoDal}" >
+    <div class="modal-dialog" role="dialog">
+      <div class="modal-header">
+        <div class="header text-center"><h2>Шартнома №: {{nomerKodi}}</h2></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="sub-title">Тошкент шаҳри <span> {{myDate| date:'MM-dd-yyyy'}}</span></div>
+      <div class="text mt-3"><p>
+        Устав асосида фаолият олиб борувчи “Inoyatov HR service” масъулияти чекланган жамияти, кейинги ўринларда
+        “Ижрочи” деб аталади, бир тарафдан ва фуқаро ___________________________________, кейинги ўринларда
+        “Буюртмачи” деб аталади, иккинчи тарафдан, биргаликда томонлар деб аталувчилар мазкур шартномани
+        қуйидагилар ҳақида туздилар:</p>
+      </div>
+      <div class="title"><h2>1. Шартнома предмети</h2></div>
+      <div class="text">
+        <p>1.1. Ушбу шартнома орқали “Ижрочи” (реклама тарқатувчи) “Буютмачи” (Реклама берувчи) томонидан тақдим
+          этилган реклама маҳсулотларини шартноманинг ажралмас қисми ҳисобланган 1-жадвалда келтирилган ва
+          “Буютмачи”нинг www.uchamiz.uz веб-сайтидаги танловидан келиб чиққан ҳолда реклама воситаларига
+          жойлаштириш, “Буюртмачи” эса ушбу кўрсатилган хизматлар учун “Ижрочи”га ҳақ тўлашни зиммасига олади.</p>
+      </div>
+      <div class="table">
+        <table class="table table-bordered">
+          <thead style="border: 1px solid black">
+          <tr>
+            <th style="border: 1px solid black" scope="col">№</th>
+            <th style="border: 1px solid black" scope="col">Реклама воситаси номи</th>
+            <th style="border: 1px solid black" scope="col">Пакет номи</th>
+            <th style="border: 1px solid black" scope="col">Муддати</th>
+            <th style="border: 1px solid black" scope="col">Нархи (ҚҚС билан бирга)</th>
+            <th>Сумма
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr style="border: 1px solid black">
+            <th>1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr style="border: 1px solid black">
+            <th>2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr style="border: 1px solid black">
+            <th>3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr style="border: 1px solid black">
+            <th scope="row" style="border: 1px solid black" colspan="5" class="text-center">Жами:</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text"><p>1.2. Мазкур шартноманинг 1.1-бандида назарда тутилган “Ижрочи”га тўланиши лозим бўлган
+
+        ҳақ _____________ сўмни ташкил этади ва “Буютмачи” (Реклама берувчи) мазкур шартнома имзоланганидан сўнг
+        ушбу ҳақни тўлиқ қисмини тўлаб беради.</p></div>
+      <div class="text"><p>1.3. Шартнома бўйича тўловлар амалга оширилгандан кейин (СКнинг
+
+
+        47-моддаси ва 14.08.2020 йилдаги 489-сон ВМҚга мувофиқ) Ҳисобварақ-фактура электрон шаклда расмийлаштирилади
+        ва Буюртмачи ҳисобварақ-фактурани тақдим этилган кундан эътиборан 10 кун ичида тасдиқлаши ёки сабабини
+        кўрсатган ҳолда рад этиши мумкин.
+      </p></div>
+      <div class="title"><h2>3. Тарафларнинг жавобгарлиги</h2></div>
+      <div class="text">
+        <p>3.1. “Буюртмачи” шартнома шартлари асосан “Ижрочи”га кўрсатиладиган хизматлари учун ҳақни тўлиқ қоплаб
+          бериш мажбуриятини зиммасига олади.</p></div>
+      <div class="text">
+        <p>
+          3.2. “Ижрочи” мазкур шартнома юзасидан мажбуриятларини бажармаслиги оқибатида “Буюртмачи” томонидан тўлов
+          қилинган суммани тўлиқ ва ушбу сумманинг 0,001 фоизи миқдоридаги суммани жарима сифатида қоплаб беради
+        </p>
+      </div>
+      <div class="text">
+        <p>3.3. Агар “Ижрочи” мазкур шартнома юзасидан мажбуриятларини қисман бажарса, мажбуриятнинг бажарилмаган
+          кисмини кайтаради ва кайтарилган сумманинг 0,001 фоизи миқдоридаги суммани жарима сифатида қоплаб беради</p>
+      </div>
+      <div class="text">
+        <p>3.4. Мазкур шартнома шартларида кўзда тутилмаган ҳолатларда тарафлар Ўзбекистон Республикасининг “Хўжалик
+          юритувчи субъеклар фаолиятининг шартномавий ҳуқуқий базаси тўғрисида”ги Қонунига мувофиқ иш юритадилар.</p>
+      </div>
+
+
+      <div class="title">
+        <h2>4. Форс-мажор</h2>
+      </div>
+
+      <div class="text">
+        <p>4.1. Сув тошқишини, зилзила ва бошқа табиий ҳодисалар, шунингдек, ҳарбий ҳаракатлар, қамал ҳолати ва давлат
+          органларининг ҳужжатлари ёки ҳатти ҳаракатлари, ёки томонларнинг назоратидан ташқари бўлган бошқа вазиятлар
+          шартнома тузилганидан кейин юзага келганлиги мазкур шартнома шартлари бажарилишига тўсқинлик қилса, томонлар
+          ушбу шартнома юзасидан жавобгар ҳисобланмайдилар.</p>
+      </div>
+
+      <div class="title"><h2>5. Низоларни ҳал этиш тартиби</h2></div>
+
+      <div class="text"><p>5.1. Келишмовчиликлар ва низоли масалалар келиб чиққан тақдирда, томонлар, қоидаги кўрса
+        мустақил равишда уларни судгача ҳал этиш чораларини кўрадилар.</p></div>
+      <div class="text"><p>5.2. Томонлар келишмовчиликлар ва низоларни ҳал этиш учун Ўзбекистон Республикасининг
+        амалдаги қоунунчилик меъёрларига кўра бевосита судга мурожаат қилишга ҳақлидир.</p></div>
+
+
+      <div class="title"><h2>6. Алоҳида қоидалар</h2></div>
+
+      <div class="text"><p>6.1. Мазкур шартномага асосан “Буюртмачи” томонидан бериладиган реклама (пост, видео, матн ва расм кўринишидаги) маҳсулотлари “Ижрочи” томонидан амалдаги тартиб-қоидалари ва икки томоннинг келишуви асосида жойлаштирилади.</p></div>
+
+
+      <div class="title"><h2>7. Қўшимча шартлар</h2></div>
+
+      <div class="text">
+        <p>7.1. Мазкур шартнома “Буюртмачи” томонидан тўлов амалга оширилган вақтдан кучга киради ва реклама маҳсулоти реклама воситаларига жойлаштирилгунга қадар амал қилади..</p>
+      </div>
+      <div class="text">
+        <p>7.2. Шартнома юридик кучга эга бўлиб электрон шаклда тузилди.</p></div>
+      <div class="text">
+        <p>7.3.Агар “Буюртмачи” шартномада белгиланган тўловни амалга оширмаса, томонлар ўртасида тузилган шартнома 3 кун ичида  ўз кучини йўқотган ҳисобланади.</p></div>
+
+
+      <div class="title"><h2>8.Томонларнинг манзиллари ва реквизитлари</h2></div>
+      <div class="table">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th scope="col">“Буюртмачи”</th>
+            <th scope="col">“Ижрочи”</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Ф.И.О</td>
+            <td>"INOYATOV HR SERVICE"</td>
+          </tr>
+          <tr>
+            <td>Паспорт маълумотлари: Серияси ва рақами</td>
+            <td>Масъулияти чекланган жамияти</td>
+          </tr>
+          <tr>
+            <td>Яшаш манзили:</td>
+            <td>Манзили: Тошкент шаҳри, Мирзо Улуғбек тумани Ҳамид Олимжон майдони ғарбий томони</td>
+          </tr>
+          <tr>
+            <td>Телефон рақами:</td>
+            <td>СТИР (ИНН) 307807627</td>
+          </tr>
+          <tr>
+            <td>Паспорти ким томонидан ва қачон берилган Банк маълумотлари:</td>
+            <td>Паспорти ким томонидан ва қачон берилган Банк маълумотлари:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>"Ўзсаноатқурилишбанк" АТБ ТШМФ</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>БММ (МФО) 00424</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Ҳ/Р: 20208000805289722001</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Директор________________М.Иноятов</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="modal-footer" style="width: 100%; height:80px">
+      <button class="btn btn-primary" (click)="closeModal()">tasdiqlash</button>
+    </div>
+    </div>
+</div>
+<app-footer></app-footer>

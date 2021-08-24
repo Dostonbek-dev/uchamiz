@@ -1,0 +1,26 @@
+.banner{
+  height: 500px;
+  background-color: #e0ac1c;
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  justify-content: space-evenly;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.bannerText h1{
+  font-size: 3vw;
+  color: #fff;
+  font-weight: 600;
+}
+
+.bannerText img{
+  width: 10vw;
+  margin-right: 20px;
+}
+
+.bannerImg img{
+  width: 20vw;
+}

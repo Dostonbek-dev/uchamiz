@@ -1,0 +1,185 @@
+<app-header></app-header>
+<div style=" margin-top: 120px">
+  <div class="container ">
+    <div class="row ">
+      <h3 >*Ushbu bo'limdan siz reklama berishingiz uchun kerakli
+        bo'limlardan tanlashingiz mumkin</h3>
+      <div class="col-md-4">
+          <label >Reklama berish turini tanlang: </label>
+      </div>
+      <div class="col-md-8 col-sm-8 col-lg-8">
+        <select
+          type="number"
+          class="form-control"
+          name="contactId"
+          ngModel
+          id="contractId2"
+        >
+          <option class="option" value="1">Ижтимоий тармоқлар</option>
+          <option class="option" value="2">Веб-сайтлар</option>
+          <option class="option" value="3">Босма ОАВларида</option>
+          <option class="option" value="4">Ташқи реклама (махсус конструкцияларда, тахталавҳаларда, экранларда, биноларда, иншоотларда, йўл чеккаларида, кўча ёритгичларининг таянчлари ва ҳоказоларда)</option>
+          <option class="option" value="5">Транспортдаги ва почта жўнатмаларидаги реклама</option>
+        </select>
+
+        <!--<select class="form-select" [(ngModel)]="turini_Tanlang" (change)="turiniTanlang()" >
+          <option  *ngFor="let opt of turlar_kelishi" [value]="opt.id" [selected]="opt.name">{{opt.name}} </option>
+        </select>-->
+      </div>
+
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label >Reklama berish vositasini tanlang: </label>
+      </div>
+      <div class="col-md-8">
+        <select
+          type="number"
+          class="form-control"
+          name="contactId"
+          ngModel
+          id="contractId"
+        >
+          <option class="option" value="1"><i class="fa fa-facebook"></i>Facebook</option>
+          <option class="option" value="2"><i class="fa fa-instagram"></i> Instagram</option>
+          <option class="option" value="3"><i class="fa fa-youtube"></i>YouTube</option>
+          <option class="option" value="4"><i class="fa fa-telegram"></i>Telegram</option>
+          <option class="option" value="5"><i class="fa fa-tiktok"></i>TikTok</option>
+        </select>
+
+        <!--<select class="form-select" [(ngModel)]="vositani_tanlang" (change)="vositaniTanlang()" id="vositani_tanlang" disabled>
+          <option  *ngFor="let opt of vosita_kelishi" [value]="opt.id" [selected]="opt.name" >{{opt.name}}</option>
+        </select>-->
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-md-4 "  *ngFor="let data of hamasi_kelishi ">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img/tik-tok-logo-33090.png"  alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{data.contractId}}</h5>
+              <p class="card-text">{{data.description}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-3">
+
+        <!--Card for Facebook-->
+        <div class="card card-hover" style="width: 18rem;">
+          <img src="../../assets/icons/tiktok.jpg" class="card-image" alt="Facebook_icon.png">
+          <div class="card-body">
+            <h5 class="card-title text-center">Facebook</h5>
+            <p class="card-text">Price Total: {{count*200}}</p>
+            <p class="card-text">Count: {{count}}</p>
+            <p class="card-text">Description: </p>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!btn_disable" class="btn btn-default" (click)="onPlusBtn()">+</button>
+            {{count}}
+            <button [disabled]="btn_disable" class="btn btn-default" (click)="onMinusBtn()">-</button>
+          </div>
+        </div>
+        <!--Card for Instagram-->
+        <div class="card card-hover" style="width: 18rem;">
+          <img src="../../assets/icons/Instagramm.png" class="card-image" alt="INstagramm.png">
+          <div class="card-body">
+            <h5 class="card-title text-center">Instagram</h5>
+            <p class="card-text">Price Total: {{count*250}}</p>
+            <p class="card-text">Count: {{count}}</p>
+            <p class="card-text">Description: </p>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!btn_disable" class="btn btn-default" (click)="onPlusBtn()">+</button>
+            {{count}}
+            <button [disabled]="btn_disable" class="btn btn-default" (click)="onMinusBtn()">-</button>
+          </div>
+        </div>
+        <!--Youtube for Instagram-->
+        <div class="card card-hover" style="width: 18rem;">
+          <img src="../../assets/icons/youtube.jpg" class="card-image" alt="INstagramm.png">
+          <div class="card-body">
+            <h5 class="card-title text-center">YouTube</h5>
+            <p class="card-text">Price Total: {{count*350}}</p>
+            <p class="card-text">Count: {{count}}</p>
+            <p class="card-text">Description: </p>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!btn_disable" class="btn btn-default" (click)="onPlusBtn()">+</button>
+            {{count}}
+            <button [disabled]="btn_disable" class="btn btn-default" (click)="onMinusBtn()">-</button>
+          </div>
+        </div>
+        <!-- Telegram for Instagram-->
+        <div class="card card-hover" style="width: 18rem;">
+          <img src="../../assets/icons/telegram.png" class="card-image" alt="INstagramm.png">
+          <div class="card-body">
+            <h5 class="card-title text-center">Telegram</h5>
+            <p class="card-text">Price Total: {{count*400}}</p>
+            <p class="card-text">Count: {{count}}</p>
+            <p class="card-text">Description: </p>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!btn_disable" class="btn btn-default" (click)="onPlusBtn()">+</button>
+            {{count}}
+            <button [disabled]="btn_disable" class="btn btn-default" (click)="onMinusBtn()">-</button>
+          </div>
+        </div>
+        <!--TikTok for Instagram-->
+        <div class="card card-hover" style="width: 18rem;">
+          <img src="../../assets/icons/tiktok.jpg" class="card-image" alt="INstagramm.png">
+          <div class="card-body">
+            <h5 class="card-title text-center">TikTok</h5>
+            <p class="card-text">Price Total: {{count*300}}</p>
+            <p class="card-text">Count: {{count}}</p>
+            <p class="card-text">Description: </p>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!btn_disable" class="btn btn-default" (click)="onPlusBtn()">+</button>
+            {{count}}
+            <button [disabled]="btn_disable" class="btn btn-default" (click)="onMinusBtn()">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="row mt-5">
+      <div class="col-md-4">
+        <label >Reklama berish turini tanlang: </label>
+      </div>
+      <div class="col-md-8 col-sm-8 col-lg-8">
+        <select class="form-select" [(ngModel)]="turini_Tanlang" (change)="turiniTanlang()" >
+          <option  *ngFor="let opt of turlar_kelishi" [value]="opt.id" [selected]="opt.name">{{opt.name}} </option>
+        </select>
+      </div>
+
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label >Reklama berish vositasini tanlang: </label>
+      </div>
+      <div class="col-md-8">
+        <select class="form-select" [(ngModel)]="vositani_tanlang" (change)="vositaniTanlang()" id="vositani_tanlang" disabled>
+          <option  *ngFor="let opt of vosita_kelishi" [value]="opt.id" [selected]="opt.name" >{{opt.name}}</option>
+        </select>
+      </div>
+    </div>-->
+
+    <div class="row mt-2 mb-5 ml-4">
+      <div class="col-md-6 ml-5">
+        <h2>Umumiy narx: {{totalPrice}}</h2>
+        <button class="btn btn-success ml-2" routerLink="/fizyur" >To'lov</button>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+

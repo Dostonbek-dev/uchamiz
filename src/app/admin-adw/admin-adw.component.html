@@ -1,0 +1,167 @@
+<app-header></app-header>
+<div class="container admin-adw">
+  <div class="row ">
+    <div *ngIf="info_text" class="alert alert-info" style="z-index: 1">
+     <h1></h1> Yangi ma'lumotlar saqlandi.
+    </div>
+    <!--    // First form-->
+    <div class="col-md-6 new-form offset-3" *ngIf="!form_open">
+      <form #form1="ngForm" (ngSubmit)="onSubmitFirstForm(form1)">
+        <input hidden type="text" name="advFormId"  ngModel="{{data_form1}}">
+        <table>
+          <tr>
+            <td><label for="contractId">Contract Info</label></td>
+            <td><select
+              type="number"
+              class="form-control"
+              name="contactId"
+              ngModel
+              id="contractId"
+            >
+              <option class="option" value="1"><i class="fa fa-facebook"></i>Facebook</option>
+              <option class="option" value="2"><i class="fa fa-instagram"></i> Instagram</option>
+              <option class="option" value="3"><i class="fa fa-youtube"></i>YouTube</option>
+              <option class="option" value="4"><i class="fa fa-telegram"></i>Telegram</option>
+              <option class="option" value="5"><i class="fa fa-tiktok"></i>TikTok</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td><label for="day">Day</label></td>
+            <td><input
+              type="number"
+              class="form-control"
+              name="day"
+              ngModel
+              id="day"
+              placeholder="day"></td>
+          </tr>
+
+          <tr>
+            <td><label for="descriptionUz">DescriptionUz</label></td>
+            <td><input
+              type="text"
+              class="form-control"
+              name="descriptionUz"
+              ngModel
+              id="descriptionUz"
+              placeholder="descriptionUz"></td>
+          </tr>
+
+          <tr>
+            <td><label for="descriptionRu">DescriptionRu</label></td>
+            <td><input
+              type="text"
+              class="form-control"
+              name="descriptionRu"
+              ngModel
+              id="descriptionRu"
+              placeholder="descriptionRu"></td>
+          </tr>
+
+          <tr>
+            <td><label for="price">Price</label></td>
+            <td><input
+              type="number"
+              class="form-control"
+              name="price"
+              ngModel
+              id="price"
+              placeholder="price"></td>
+          </tr>
+
+          <tr>
+            <td><label for="name">Name</label></td>
+            <td><input
+              type="text"
+              class="form-control"
+              name="name"
+              ngModel
+              id="name"
+              placeholder="name"></td>
+          </tr>
+
+          <tr>
+            <td><label for="type">Type</label></td>
+            <td><select
+              id="type"
+              class="form-control"
+              ngModel
+              name="type">
+
+              <option value="SOCIAL_NETWORK">SOCIAL_NETWORK</option>
+              <option value="WEB_SITE">WEB_SITE</option>
+              <option value="MAGAZINE">MAGAZINE</option>
+              <option value="OUTER_ADVERTISING">OUTER_ADVERTISING</option>
+            </select></td>
+          </tr>
+
+        </table>
+        <button type="submit" class="btn btn-danger mt-3">Form-2</button>
+      </form>
+
+    </div>
+
+
+    <!--    //Secondary form-->
+    <div class="col-md-6 new-form offset-3" *ngIf="form_open">
+      <form #form2="ngForm" (ngSubmit)="onSubmitSecondaryForm(form2)">
+        <table>
+          <tr>
+            <td><label for="contractId">Name Uz</label></td>
+            <td><input
+              type="text"
+              class="form-control"
+              name="nameUz"
+              ngModel
+              id="nameUz"
+              placeholder="Name Uz"></td>
+          </tr>
+          <tr>
+            <td><label for="day">Name Ru</label></td>
+            <td><input
+              type="text"
+              class="form-control"
+              name="nameRu"
+              ngModel
+              id="nameRu"
+              placeholder="Name Ru"></td>
+          </tr>
+
+          <tr>
+            <td><label for="descriptionUz">Contract Number</label></td>
+            <td><select
+              type="number"
+              class="form-control"
+              name="contactId"
+              ngModel
+              id="contractId2"
+            >
+              <option class="option" value="1">Ижтимоий тармоқлар</option>
+              <option class="option" value="2">Веб-сайтлар</option>
+              <option class="option" value="3">Босма ОАВларида</option>
+              <option class="option" value="4">Ташқи реклама (махсус конструкцияларда, тахталавҳаларда, экранларда, биноларда, иншоотларда, йўл чеккаларида, кўча ёритгичларининг таянчлари ва ҳоказоларда)</option>
+              <option class="option" value="5">Транспортдаги ва почта жўнатмаларидаги реклама</option>
+            </select></td>
+          </tr>
+
+          <tr>
+            <td><label for="descriptionRu">Contract Date</label></td>
+            <td><input
+              type="date"
+              class="form-control"
+              name="contractDate"
+              ngModel
+              id="contractDate"
+              placeholder="contractDate"></td>
+          </tr>
+
+        </table>
+        <button type="submit" class="btn btn-danger mt-3">Fomr-1</button>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+<app-footer></app-footer>

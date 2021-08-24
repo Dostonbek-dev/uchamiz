@@ -1,0 +1,60 @@
+.landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw 0 10vw;
+  height: 100vh;
+  transition: all 1s;
+
+}
+
+.landing:hover {
+  box-shadow: rgba(26, 24, 34, 0.15) 0px 48px 100px 0px;
+}
+
+.landingText h3 {
+  font-size: 4vw;
+  margin: 0 !important;
+  color: #001f3f;
+}
+
+.landingText h4 {
+  margin: 15px 0 0 0 !important;
+  font-size: 20px;
+  opacity: 0.8;
+  line-height: 30px;
+  color: #001f3f;
+  font-family: 'Cookie', cursive;
+}
+
+.landingImage img {
+  width: 28vw;
+}
+
+.btn-forward-input {
+  margin-top: 50px;
+  outline: none;
+  width: 155px;
+  height: 50px;
+  font-family: 'Cookie', cursive;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  color: #000;
+  background-color: #C6FF00;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.btn-forward-input:hover {
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: #001f3f;
+  transform: translateY(-7px);
+  font-weight: bold;
+}

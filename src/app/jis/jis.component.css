@@ -1,0 +1,64 @@
+.card-footer{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer .btn {
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #2f8be0;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.card_ {
+  border-radius: 9px;
+  font-family: 'Cookie', cursive;
+  color: #e0ac1c;
+  font-size: 16px;
+  margin-left: auto;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.shartlar .form-check {
+  margin-left: 20px!important;
+  margin-bottom: 10px;
+}
+.hide {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 9999;
+  height: 85vh;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: none;
+  overflow-y: scroll;
+  background: white;
+  overflow-x: hidden;
+}
+
+.title, .header {
+  text-align: center;
+  font-family: "Times New Roman", serif;
+}
+
+.text p {
+  padding: 6px;
+  font-family: Montserrat, serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: black;
+}
+
+.sub-title span {
+  float: right;
+}
