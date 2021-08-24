@@ -48,12 +48,12 @@ button[disabled]{
 
 .title, .header {
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family:Georgia, serif;
 }
 
 .text p {
   padding: 6px;
-  font-family: Montserrat, serif;
+  font-family:Georgia, serif;
   font-size: 18px;
   line-height: 20px;
   color: black;

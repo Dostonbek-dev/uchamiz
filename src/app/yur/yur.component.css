@@ -10,7 +10,7 @@
 }
 
 .card {
-  font-family: 'Cookie', cursive;
+  font-family:Georgia, serif;
   color: #e0ac1c;
   border-radius: 9px;
   font-size: 16px;
@@ -43,7 +43,7 @@
 
 .title, .header {
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family:Georgia, serif;
 }
 
 .text p {

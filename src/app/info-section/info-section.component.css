@@ -5,10 +5,10 @@
 
 .infoSection .infoHeader h1 span{
   color: #2f8be0;
-  font-family: 'Cookie', cursive;
+  font-family:Georgia, serif;
 }
 .infoSection .infoHeader h1{
-  font-family: 'Cookie', cursive;
+  font-family:Georgia, serif;
   color: #e0ac1c;
 }
 .infoHeader{
@@ -75,7 +75,7 @@
 
 .cardContent p{
   line-height: 30px;
-  font-family: 'Cookie', cursive;
+  font-family:Georgia, serif;
 
 }
 
